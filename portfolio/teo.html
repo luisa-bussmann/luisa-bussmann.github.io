@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisa Bußmann</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .subprojects-container {
+            transition: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="gallery-title">Teo</div>
+            <div class="nav-name"><b>Luisa Bußmann</b></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="#" id="portfolio-link">Portfolio</a>
+                    <div id="subprojects-container" class="subprojects-container">
+                        <ul class="subprojects">
+                            <li><a href="azur_sombre.html">Azur Sombre</a></li>
+                            <li><a href="darc.html">D'Arc</a></li>
+                            <li><a href="Out_there_where_the_people_are.html">Out there where the people are</a></li>
+                            <li><a href="rotes_licht.html">Rotes Licht</a></li>
+                            <li><a href="schwarz_weiß.html">Schwarz Weiß</a></li>
+                            <li class="active"><a href="teo.html">Teo</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../about.html">About</a></li>
+                <li><a target=”_blank” href="https://www.instagram.com/luisa_bussmann">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="gallery">
+            <img class="project-image" src="../images/portfolio/teo/1.jpg" alt="Teo">
+            <img class="project-image" src="../images/portfolio/teo/2.jpg" alt="Teo">
+            <img class="project-image" src="../images/portfolio/teo/3.jpg" alt="Teo">
+            <img class="project-image" src="../images/portfolio/teo/4.jpg" alt="Teo">
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const subprojectsContainer = document.querySelector('.subprojects-container');
+            if (subprojectsContainer) {
+                subprojectsContainer.classList.add("open");
+            }
+        });
+    </script>
+</body>
+</html>

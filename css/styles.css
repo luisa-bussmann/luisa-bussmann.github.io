@@ -1,0 +1,209 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(234, 238, 238);
+    font-family: 'Franklin Gothic Heavy Regular', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    height: 100%;
+}
+
+/********** Navigation **********/
+
+.navigation {
+    width: 30%; 
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.navigation a {
+    text-decoration: none; 
+    color: black; 
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; 
+}
+
+.navigation li {
+    padding: 10px;
+}
+
+.nav-name {
+    width: 100%;
+    text-align: center; 
+    font-size: 1.5em;
+    margin-bottom: 20px; 
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 3px; 
+    color: #808080;
+}
+
+/********** Gallery **********/
+
+.gallery {
+    width: 70%;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.gallery img {
+    width: calc(50% - 10px); 
+    height: auto; 
+    margin: 5px;
+    object-fit: contain;
+}
+
+.gallery img.horizontal {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.gallery-title {
+    font-family: 'Adobe Garamond', serif;
+    line-height: 2em;
+    text-align: center;
+    font-size: 1.5em; 
+    margin-bottom: 20px; 
+    padding-top: 20px;
+}
+
+/********** Subprojects **********/
+
+.subprojects-container {
+    padding-left: 10px;
+    margin-top: 10px;
+    border-left: 2px;
+    overflow: hidden;
+    max-height: 0; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+.subprojects-container.open {
+    max-height: 300px; 
+}
+
+.subprojects-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.subprojects-container li {
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.subprojects-container a {
+    color: #808080; 
+}
+
+/********** Burger Menu **********/
+
+.burger-menu {
+    position: fixed; 
+    top: 15px; 
+    left: 15px; 
+    z-index: 9999; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px; 
+    background-color: rgb(234, 238, 238); 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px; 
+    height: 3px; 
+    background-color: #333; 
+    margin: 5px 0; 
+}
+
+.burger-menu.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/********** Font **********/
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy Regular';
+    src: url('../fonts/FranklinGothicHeavy.woff2') format('woff2');
+    font-weight: regular;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond';
+    src: url('../fonts/AdobeGaramondW01Bd.woff2') format('woff2');
+    font-weight: regular;
+    font-style: regular;
+}
+
+/********** Media Queries **********/
+
+@media (max-width: 800px) {
+    .gallery img.vertical {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+    }
+
+    .gallery img {
+        width: 100%; 
+        margin: 5px; 
+        height: auto; 
+        object-fit: contain;
+    }
+
+    .navigation {
+        display: none; 
+        width: 100%; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        background-color: rgb(234, 238, 238); 
+        z-index: 10; 
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .burger-menu {
+        display: block; 
+    }
+
+    .gallery img {
+        width: calc(50% - 10px); 
+    }
+}

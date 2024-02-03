@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luisa Bußmann</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .image-title {
+            text-align: left; 
+            margin-bottom: 25px;
+            font-size: 1em; 
+            margin-left: 10px;
+        }
+        
+        .image-title a {
+            color: black; 
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="nav-name"><b>Luisa Bußmann</b></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a target=”_blank” href="https://www.instagram.com/luisa_bussmann">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="gallery">
+            <div class="grid">
+                <div class="grid-item">
+                    <a href="portfolio/Out_there_where_the_people_are.html">
+                        <img src="images/portfolio/Out_there_where_the_people_are/17.jpg" alt="Out there where the people are">
+                    </a>
+                    <div class="image-title">
+                        <a href="portfolio/Out_there_where_the_people_are.html">
+                            Out there where the people are
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <a href="portfolio/darc.html">
+                        <img src="images/portfolio/d'arc/9.jpg" alt="d'arc">
+                    </a>
+                    <div class="image-title">
+                        <a href="portfolio/darc.html">
+                            D'Arc
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <a href="portfolio/azur_sombre.html">
+                        <img src="images/portfolio/azur_sombre/1.jpg" alt="Azur Sombre">
+                    </a>   
+                    <div class="image-title">
+                        <a href="portfolio/azur_sombre.html">
+                            Azur Sombre
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <a href="portfolio/rotes_licht.html">
+                        <img src="images/portfolio/rotes_licht/6.jpg" alt="rotes licht">
+                    </a>
+                    <div class="image-title">
+                        <a href="portfolio/rotes_licht.html">
+                        Rotes Licht
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <a href="portfolio/schwarz_weiß.html">
+                        <img src="images/portfolio/schwarz_weiß/1.jpg" alt="schwarz weiß">
+                    </a>
+                    <div class="image-title">
+                        <a href="portfolio/schwarz_weiß.html">
+                            Schwarz Weiß
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <a href="portfolio/teo.html">
+                        <img src="images/portfolio/teo/4.jpg" alt="teo">
+                    </a>
+                    <div class="image-title">
+                        <a href="portfolio/teo.html">
+                            Teo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var grid = document.querySelector('.grid');
+            for (var i = grid.children.length; i >= 0; i--) {
+                grid.appendChild(grid.children[Math.random() * i | 0]);
+            }
+        });
+    </script>
+</body>
+</html>
